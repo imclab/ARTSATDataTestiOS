@@ -4,50 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Data Sats View Controller - First-->
-        <scene sceneID="11">
-            <objects>
-                <viewController id="2" customClass="ARTSATDataSatsViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="20" width="768" height="955"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="18">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Loaded by the First View Controller — an instance of ARTSATDataFirstViewController — specified in the app delegate." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="19">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="268" id="Ka6-KM-ccG"/>
-                                    <constraint firstAttribute="height" constant="70" id="WP3-kA-6dL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="20">
-                                <items/>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="20" firstAttribute="leading" secondItem="17" secondAttribute="leading" type="default" id="21X-Fc-h5m"/>
-                            <constraint firstItem="20" firstAttribute="top" secondItem="17" secondAttribute="top" type="default" id="82v-FK-dPD"/>
-                            <constraint firstItem="18" firstAttribute="leading" secondItem="17" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9xU-8S-4zl"/>
-                            <constraint firstAttribute="trailing" secondItem="18" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GbQ-Sy-14J"/>
-                            <constraint firstItem="19" firstAttribute="centerX" secondItem="18" secondAttribute="centerX" type="default" id="b0V-hJ-9Xa"/>
-                            <constraint firstItem="20" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" type="default" id="i7B-V8-9lR"/>
-                            <constraint firstItem="18" firstAttribute="top" secondItem="17" secondAttribute="top" constant="250" id="oEv-T3-Vih"/>
-                            <constraint firstItem="19" firstAttribute="top" secondItem="17" secondAttribute="top" constant="350" id="pKg-gt-hVJ"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3041" y="150"/>
-        </scene>
         <!--Data Map View Controller - Second-->
         <scene sceneID="13">
             <objects>
@@ -106,19 +62,187 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="MCs-go-83n" kind="relationship" relationship="viewControllers" id="k8i-Dj-rQu"/>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="28"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2023" y="718"/>
+            <point key="canvasLocation" x="2015" y="-42"/>
+        </scene>
+        <!--Sat Detail View Controller - Sensors-->
+        <scene sceneID="5ku-XP-fem">
+            <objects>
+                <viewController storyboardIdentifier="ARTSATSatDetail" id="P9i-DS-NZM" customClass="ARTSATSatDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zzM-nM-Rzv">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Invader" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAY-AI-yOT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8uV-Of-bWc"/>
+                                    <constraint firstAttribute="width" constant="60" id="ihx-Bc-cDH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="sensors :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGT-mn-3eN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eiW-ZE-IiR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DMe-jF-OHI">
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="675" id="MM5-cM-hPk"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="DetailTableCell" textLabel="j4b-4n-stf" detailTextLabel="baT-KS-6l6" style="IBUITableViewCellStyleValue1" id="jsQ-eH-Zhr">
+                                        <rect key="frame" x="0.0" y="22" width="675" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="675" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j4b-4n-stf">
+                                                    <rect key="frame" x="10" y="11" width="35" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="baT-KS-6l6">
+                                                    <rect key="frame" x="621" y="11" width="44" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="P9i-DS-NZM" id="1R1-Mn-QDc"/>
+                                    <outlet property="delegate" destination="P9i-DS-NZM" id="mDX-WV-p2g"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9l-ED-jQX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="Fsq-nM-3cq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="r9l-ED-jQX" firstAttribute="leading" secondItem="DMe-jF-OHI" secondAttribute="leading" type="default" id="Be2-6C-Ekl"/>
+                            <constraint firstItem="eAY-AI-yOT" firstAttribute="leading" secondItem="zzM-nM-Rzv" secondAttribute="leading" constant="13" id="D7J-Pz-lav"/>
+                            <constraint firstAttribute="trailing" secondItem="DMe-jF-OHI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="DqM-ec-brB"/>
+                            <constraint firstItem="DMe-jF-OHI" firstAttribute="top" secondItem="r9l-ED-jQX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hvf-IE-cok"/>
+                            <constraint firstItem="eAY-AI-yOT" firstAttribute="baseline" secondItem="r9l-ED-jQX" secondAttribute="baseline" type="default" id="I1D-jS-VX0"/>
+                            <constraint firstItem="eAY-AI-yOT" firstAttribute="leading" secondItem="RGT-mn-3eN" secondAttribute="leading" type="default" id="Ou9-E0-tRC"/>
+                            <constraint firstItem="RGT-mn-3eN" firstAttribute="top" secondItem="eAY-AI-yOT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TNU-Nf-p3M"/>
+                            <constraint firstItem="DMe-jF-OHI" firstAttribute="bottom" secondItem="zzM-nM-Rzv" secondAttribute="bottom" type="default" id="Yzs-Y4-exp"/>
+                            <constraint firstItem="eAY-AI-yOT" firstAttribute="trailing" secondItem="RGT-mn-3eN" secondAttribute="trailing" type="default" id="mKJ-Fh-Zgp"/>
+                            <constraint firstItem="r9l-ED-jQX" firstAttribute="top" secondItem="zzM-nM-Rzv" secondAttribute="top" constant="20" symbolic="YES" type="default" id="x4Y-ql-5en"/>
+                            <constraint firstItem="eAY-AI-yOT" firstAttribute="top" secondItem="zzM-nM-Rzv" secondAttribute="top" constant="20" symbolic="YES" type="default" id="zE8-CO-wfQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sensors" id="Gwz-VB-8XZ">
+                        <barButtonItem key="backBarButtonItem" title="Sats" id="bN6-CI-xLJ"/>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="r9l-ED-jQX" id="qfn-Nc-FbG"/>
+                        <outlet property="tableView" destination="DMe-jF-OHI" id="DKO-fd-FBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTp-aZ-4HW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5355" y="-37"/>
+        </scene>
+        <!--Pull Refresh Table View Controller - Sats-->
+        <scene sceneID="0CL-WR-Q2s">
+            <objects>
+                <tableViewController id="pUz-Zv-1os" customClass="ARTSATPullRefreshTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="EcV-3h-fwW">
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SatTableCellIdentifier" rowHeight="55" id="ARe-ov-vpK">
+                                <rect key="frame" x="0.0" y="22" width="768" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="748" height="54"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pUz-Zv-1os" id="Rlk-4V-5Rc"/>
+                            <outlet property="delegate" destination="pUz-Zv-1os" id="B6k-B5-Tbz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sats" id="dvY-mo-Y0P"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdj-xN-pBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4429" y="-37"/>
+        </scene>
+        <!--Navigation Controller - Sats-->
+        <scene sceneID="YEf-kw-K6D">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="MCs-go-83n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sats" id="N4p-hc-LDe"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="w6g-sj-trw">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pUz-Zv-1os" kind="relationship" relationship="rootViewController" id="Emk-bv-hbS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXG-QF-a4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3433" y="-42"/>
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="ARTSATDataMapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ARTSATDataMapViewController.h"/>
+        </class>
+        <class className="ARTSATPullRefreshTableViewController" superclassName="PullRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ARTSATPullRefreshTableViewController.h"/>
+        </class>
+        <class className="ARTSATSatDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ARTSATSatDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PullRefreshTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PullRefreshTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
