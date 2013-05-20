@@ -13,6 +13,8 @@
 #import "ARTSATCoreDataManager.h"
 #import "ARTSATSatDetailViewController.h"
 
+#define REFRESH_HEADER_HEIGHT 52.0f
+
 @interface ARTSATPullRefreshTableViewController ()
 
 - (void)recivedDataAndAddSat:(NSNotification*)notification;
@@ -42,6 +44,9 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [ARTSATCoreDataManager sharedInstance].delegate = self;
+    
+    [self.refreshHeaderView setFrame:CGRectMake(0, 0 - REFRESH_HEADER_HEIGHT, self.view.frame.size.width, REFRESH_HEADER_HEIGHT)];
+    [self.refreshLabel setFrame:CGRectMake(0, 0, self.view.frame.size.width, REFRESH_HEADER_HEIGHT)];
     
     self.refreshLabel.textColor = [UIColor whiteColor];
     [self.refreshSpinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
