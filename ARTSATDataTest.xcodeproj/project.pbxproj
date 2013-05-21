@@ -34,6 +34,8 @@
 		B27BB190173A3E4800255F05 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27BB18E173A3E4800255F05 /* MainStoryboard_iPad.storyboard */; };
 		B27BB19A173A3E4800255F05 /* ARTSATDataMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27BB199173A3E4800255F05 /* ARTSATDataMapViewController.m */; };
 		B27BB1A8173A3F9700255F05 /* ARTSATApiDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B27BB1A7173A3F9700255F05 /* ARTSATApiDataRequest.m */; };
+		B2A9BBD6174B727400AC28A2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A9BBD5174B727400AC28A2 /* CoreLocation.framework */; };
+		B2A9BBD8174B72C800AC28A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A9BBD7174B72C800AC28A2 /* MapKit.framework */; };
 		B2ACFED3173B9D5200339861 /* ARTSATDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2ACFED1173B9D5200339861 /* ARTSATDataModel.xcdatamodeld */; };
 		B2ACFED7173BAE0400339861 /* ARTSATCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ACFED6173BAE0400339861 /* ARTSATCoreDataManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B2ACFEDC173BB9E200339861 /* ARTSATSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ACFEDB173BB9E200339861 /* ARTSATSensor.m */; };
@@ -77,6 +79,8 @@
 		B27BB199173A3E4800255F05 /* ARTSATDataMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARTSATDataMapViewController.m; sourceTree = "<group>"; };
 		B27BB1A6173A3F9700255F05 /* ARTSATApiDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSATApiDataRequest.h; sourceTree = "<group>"; };
 		B27BB1A7173A3F9700255F05 /* ARTSATApiDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSATApiDataRequest.m; sourceTree = "<group>"; };
+		B2A9BBD5174B727400AC28A2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B2A9BBD7174B72C800AC28A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B2ACFED2173B9D5200339861 /* ARTSATDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ARTSATDataModel.xcdatamodel; sourceTree = "<group>"; };
 		B2ACFED5173BAE0400339861 /* ARTSATCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSATCoreDataManager.h; sourceTree = "<group>"; };
 		B2ACFED6173BAE0400339861 /* ARTSATCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSATCoreDataManager.m; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A9BBD8174B72C800AC28A2 /* MapKit.framework in Frameworks */,
+				B2A9BBD6174B727400AC28A2 /* CoreLocation.framework in Frameworks */,
 				B264E4CE174481FC0067ADFD /* QuartzCore.framework in Frameworks */,
 				B24E585F173B81B000A75109 /* CoreData.framework in Frameworks */,
 				B27BB174173A3E4800255F05 /* UIKit.framework in Frameworks */,
@@ -172,6 +178,8 @@
 		B27BB172173A3E4800255F05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2A9BBD7174B72C800AC28A2 /* MapKit.framework */,
+				B2A9BBD5174B727400AC28A2 /* CoreLocation.framework */,
 				B264E4CD174481FC0067ADFD /* QuartzCore.framework */,
 				B24E585E173B81B000A75109 /* CoreData.framework */,
 				B27BB173173A3E4800255F05 /* UIKit.framework */,
