@@ -45,11 +45,11 @@
     self.tableView.delegate = self;
     [ARTSATCoreDataManager sharedInstance].delegate = self;
     
-    [self.refreshHeaderView setFrame:CGRectMake(0, 0 - REFRESH_HEADER_HEIGHT, self.view.frame.size.width, REFRESH_HEADER_HEIGHT)];
-    [self.refreshLabel setFrame:CGRectMake(0, 0, self.view.frame.size.width, REFRESH_HEADER_HEIGHT)];
+    self.refreshControl  =[[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     
-    self.refreshLabel.textColor = [UIColor whiteColor];
-    [self.refreshSpinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
+    [self.refreshControl beginRefreshing];
+    [self refresh:self];
 }
 
 -(void)viewWillUnload {
@@ -58,7 +58,8 @@
 }
 
 #pragma mark - refresh Override
-- (void)refresh {
+- (void) refresh:(id)sender {
+    [self.refreshControl beginRefreshing];
     [self sendGetRequest];
 }
 
@@ -133,7 +134,7 @@
             [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
     }
-    [self stopLoading];
+    [self.refreshControl endRefreshing];
 }
 
 @end

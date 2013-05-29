@@ -7,8 +7,7 @@
 //
 
 #import "ARTSATCoreDataManager.h"
-#import "PullRefreshTableViewController.h"
 
-@interface ARTSATPullRefreshTableViewController : PullRefreshTableViewController <ARTSATCoreDataManagerDelegate>
+@interface ARTSATPullRefreshTableViewController : UITableViewController <ARTSATCoreDataManagerDelegate>
 
 @end

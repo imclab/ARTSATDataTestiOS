@@ -17,7 +17,6 @@
 		B2323A99173CD014009B99A6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2323A92173CD014009B99A6 /* second@2x.png */; };
 		B24E585F173B81B000A75109 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24E585E173B81B000A75109 /* CoreData.framework */; };
 		B24E5868173B861F00A75109 /* ARTSATSat.m in Sources */ = {isa = PBXBuildFile; fileRef = B24E5867173B861F00A75109 /* ARTSATSat.m */; };
-		B264E4CA174481C60067ADFD /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B264E4C9174481C60067ADFD /* PullRefreshTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B264E4CC174481D80067ADFD /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B264E4CB174481D80067ADFD /* arrow.png */; };
 		B264E4CE174481FC0067ADFD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B264E4CD174481FC0067ADFD /* QuartzCore.framework */; };
 		B264E4D61744850D0067ADFD /* ARTSATPullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B264E4D51744850D0067ADFD /* ARTSATPullRefreshTableViewController.m */; };
@@ -55,8 +54,6 @@
 		B24E585E173B81B000A75109 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B24E5866173B861F00A75109 /* ARTSATSat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSATSat.h; sourceTree = "<group>"; };
 		B24E5867173B861F00A75109 /* ARTSATSat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSATSat.m; sourceTree = "<group>"; };
-		B264E4C8174481C60067ADFD /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
-		B264E4C9174481C60067ADFD /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		B264E4CB174481D80067ADFD /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		B264E4CD174481FC0067ADFD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B264E4D41744850D0067ADFD /* ARTSATPullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSATPullRefreshTableViewController.h; sourceTree = "<group>"; };
@@ -152,8 +149,6 @@
 		B264E4C7174481C60067ADFD /* vendor */ = {
 			isa = PBXGroup;
 			children = (
-				B264E4C8174481C60067ADFD /* PullRefreshTableViewController.h */,
-				B264E4C9174481C60067ADFD /* PullRefreshTableViewController.m */,
 			);
 			path = vendor;
 			sourceTree = "<group>";
@@ -342,7 +337,6 @@
 				B2ACFEDC173BB9E200339861 /* ARTSATSensor.m in Sources */,
 				B2ACFEDF173BBB4E00339861 /* ARTSATInvaderSat.m in Sources */,
 				B2323A89173CC642009B99A6 /* ARTSATSatDetailViewController.m in Sources */,
-				B264E4CA174481C60067ADFD /* PullRefreshTableViewController.m in Sources */,
 				B264E4D61744850D0067ADFD /* ARTSATPullRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,11 +434,13 @@
 		B27BB1A2173A3E4800255F05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: KOICHIRO MORI (V5QZDN7ZWN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARTSATDataTest/ARTSATDataTest-Prefix.pch";
 				INFOPLIST_FILE = "ARTSATDataTest/ARTSATDataTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B7E3309E-4D8E-49DC-BA9B-1B39F8A669AF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
