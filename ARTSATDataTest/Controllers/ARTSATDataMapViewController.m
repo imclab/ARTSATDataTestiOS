@@ -33,7 +33,9 @@
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    self.mapView.centerCoordinate = mapView.userLocation.location.coordinate;
+    if (YES == [object isKindOfClass:[MKMapView class]]) {
+        self.mapView.centerCoordinate = mapView.userLocation.location.coordinate;
+    }
 }
 
 @end
