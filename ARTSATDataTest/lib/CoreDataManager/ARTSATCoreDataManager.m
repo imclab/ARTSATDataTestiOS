@@ -267,6 +267,7 @@ static ARTSATCoreDataManager* sharedStatusManager = nil;
     }
     
     [sharedStatusManager.delegate controller:controller didChangeObject:anObject atIndexPath:indexPath forChangeType:type newIndexPath:newIndexPath];
+    [self.delegate refershFinished];
 }
 
 @end

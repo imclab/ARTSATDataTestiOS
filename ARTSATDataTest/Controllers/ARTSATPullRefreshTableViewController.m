@@ -134,9 +134,9 @@
             [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
     }
-    [self.refreshControl endRefreshing];
 }
 
+#pragma mark - DataManager delegate
 -(void)refershFinished {
     [self.refreshControl endRefreshing];
 }
