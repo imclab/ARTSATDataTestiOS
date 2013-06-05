@@ -213,7 +213,7 @@ static ARTSATCoreDataManager* sharedStatusManager = nil;
                     sensor.sensor_name = key;
                     sensor.type = sensorsObject[@"type"];
                     sensor.unit = sensorsObject[@"unit"];
-                    sensor.unit = sensorsObject[@"unit"];
+                    sensor.value = sensorsObject[@"value"];
                     [sat addSensorsObject:sensor];
                 }
             }
