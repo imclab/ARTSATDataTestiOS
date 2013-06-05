@@ -14,7 +14,7 @@ static NSString *const MODEL_CLASS_NAME = @"ARTSATSatManagedObject";
 static NSString *const DB_NAME = @"satRecord.sqlite";
 
 @implementation ARTSATCoreDataManager
-@synthesize managedObjectModel, managedObjectContext, persistentStoreCoordinator, sats, delegate;
+@synthesize managedObjectModel, managedObjectContext, persistentStoreCoordinator, delegate;
 
 static ARTSATCoreDataManager* sharedStatusManager = nil;
 
@@ -230,7 +230,7 @@ static ARTSATCoreDataManager* sharedStatusManager = nil;
 
 #pragma mark - Validate Duplication of Sat Data
 -(BOOL)validateDuplicationSat:(NSNumber*)closest_available_time_unix { //check data dupulication by closest_available_time_unix
-    for (ARTSATInvaderSat* currentSat in self.sats) {
+    for (ARTSATInvaderSat* currentSat in sharedStatusManager.sats) {
         if ([closest_available_time_unix isEqualToNumber: currentSat.closest_available_time_unix] ) {
             return YES;
         };
