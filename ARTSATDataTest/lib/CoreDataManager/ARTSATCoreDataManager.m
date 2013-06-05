@@ -190,6 +190,12 @@ static ARTSATCoreDataManager* sharedStatusManager = nil;
             return;
         }
         
+        for (NSDictionary *result in results) {
+            if ([self validateDuplicationSat:result[@"closest_available_time_unix"]]) {
+                return;
+            }
+        };
+        
         ARTSATInvaderSat *sat = (ARTSATInvaderSat *)[NSEntityDescription insertNewObjectForEntityForName:@"ARTSATInvaderSat" inManagedObjectContext:self.managedObjectContext];
         
         for (NSDictionary *result in results) {
@@ -200,7 +206,7 @@ static ARTSATCoreDataManager* sharedStatusManager = nil;
             sat.closest_available_time_unix = result[@"closest_available_time_unix"];
             sat.closest_available_time_iso_string = result[@"closest_available_time_iso_string"];
             
-            NSTimeInterval interval = [sat.requested_time_unix doubleValue];
+            NSTimeInterval interval = [sat.closest_available_time_unix doubleValue];
             sat.date = [NSDate dateWithTimeIntervalSince1970:interval];
             
             NSArray *allSensorsKeys = [result[@"sensors"] allKeys];
@@ -222,10 +228,21 @@ static ARTSATCoreDataManager* sharedStatusManager = nil;
     });
 }
 
+#pragma mark - Validate Duplication of Sat Data
+-(BOOL)validateDuplicationSat:(NSNumber*)closest_available_time_unix { //check data dupulication by closest_available_time_unix
+    for (ARTSATInvaderSat* currentSat in self.sats) {
+        if ([closest_available_time_unix isEqualToNumber: currentSat.closest_available_time_unix] ) {
+            return YES;
+        };
+    }
+    return NO;
+}
+
 -(void)recivedDataAndAddInvaderSat:(NSNotification*)notificatin {
     if(nil != [notificatin userInfo]) {
         [self addSatInvaderWithResponse:[notificatin userInfo]];
     }
+    [self.delegate refershFinished];
 }
 
 #pragma mark NSFetchedResultsController delegate method

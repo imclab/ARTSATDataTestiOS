@@ -137,4 +137,8 @@
     [self.refreshControl endRefreshing];
 }
 
+-(void)refershFinished {
+    [self.refreshControl endRefreshing];
+}
+
 @end
