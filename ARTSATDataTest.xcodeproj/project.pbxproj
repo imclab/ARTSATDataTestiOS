@@ -39,6 +39,8 @@
 		B2ACFED7173BAE0400339861 /* ARTSATCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ACFED6173BAE0400339861 /* ARTSATCoreDataManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B2ACFEDC173BB9E200339861 /* ARTSATSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ACFEDB173BB9E200339861 /* ARTSATSensor.m */; };
 		B2ACFEDF173BBB4E00339861 /* ARTSATInvaderSat.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ACFEDE173BBB4E00339861 /* ARTSATInvaderSat.m */; };
+		B2B63B46175EDC0B00BCE0F2 /* ARTSATDataGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B63B45175EDC0B00BCE0F2 /* ARTSATDataGraphViewController.m */; };
+		B2B63B4B175EE52200BCE0F2 /* ARTSATDataGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B63B4A175EE52200BCE0F2 /* ARTSATDataGraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,10 @@
 		B2ACFEDB173BB9E200339861 /* ARTSATSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSATSensor.m; sourceTree = "<group>"; };
 		B2ACFEDD173BBB4E00339861 /* ARTSATInvaderSat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSATInvaderSat.h; sourceTree = "<group>"; };
 		B2ACFEDE173BBB4E00339861 /* ARTSATInvaderSat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSATInvaderSat.m; sourceTree = "<group>"; };
+		B2B63B44175EDC0A00BCE0F2 /* ARTSATDataGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARTSATDataGraphViewController.h; path = ARTSATDataGraphViewController/ARTSATDataGraphViewController.h; sourceTree = "<group>"; };
+		B2B63B45175EDC0B00BCE0F2 /* ARTSATDataGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARTSATDataGraphViewController.m; path = ARTSATDataGraphViewController/ARTSATDataGraphViewController.m; sourceTree = "<group>"; };
+		B2B63B49175EE52200BCE0F2 /* ARTSATDataGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSATDataGraphView.h; sourceTree = "<group>"; };
+		B2B63B4A175EE52200BCE0F2 /* ARTSATDataGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSATDataGraphView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,13 +98,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27BB178173A3E4800255F05 /* CoreGraphics.framework in Frameworks */,
 				B2A9BBD8174B72C800AC28A2 /* MapKit.framework in Frameworks */,
 				B2A9BBD6174B727400AC28A2 /* CoreLocation.framework in Frameworks */,
 				B264E4CE174481FC0067ADFD /* QuartzCore.framework in Frameworks */,
 				B24E585F173B81B000A75109 /* CoreData.framework in Frameworks */,
 				B27BB174173A3E4800255F05 /* UIKit.framework in Frameworks */,
 				B27BB176173A3E4800255F05 /* Foundation.framework in Frameworks */,
-				B27BB178173A3E4800255F05 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +114,7 @@
 		B2323A8A173CCFA5009B99A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B2B63B47175EE4E500BCE0F2 /* Graph View Controller */,
 				B264E4D41744850D0067ADFD /* ARTSATPullRefreshTableViewController.h */,
 				B264E4D51744850D0067ADFD /* ARTSATPullRefreshTableViewController.m */,
 				B27BB198173A3E4800255F05 /* ARTSATDataMapViewController.h */,
@@ -251,6 +258,26 @@
 			path = CoreDataManager;
 			sourceTree = "<group>";
 		};
+		B2B63B47175EE4E500BCE0F2 /* Graph View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B2B63B48175EE50300BCE0F2 /* GraphView */,
+				B2B63B44175EDC0A00BCE0F2 /* ARTSATDataGraphViewController.h */,
+				B2B63B45175EDC0B00BCE0F2 /* ARTSATDataGraphViewController.m */,
+			);
+			name = "Graph View Controller";
+			sourceTree = "<group>";
+		};
+		B2B63B48175EE50300BCE0F2 /* GraphView */ = {
+			isa = PBXGroup;
+			children = (
+				B2B63B49175EE52200BCE0F2 /* ARTSATDataGraphView.h */,
+				B2B63B4A175EE52200BCE0F2 /* ARTSATDataGraphView.m */,
+			);
+			name = GraphView;
+			path = ARTSATDataGraphViewController/GraphView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +365,8 @@
 				B2ACFEDF173BBB4E00339861 /* ARTSATInvaderSat.m in Sources */,
 				B2323A89173CC642009B99A6 /* ARTSATSatDetailViewController.m in Sources */,
 				B264E4D61744850D0067ADFD /* ARTSATPullRefreshTableViewController.m in Sources */,
+				B2B63B46175EDC0B00BCE0F2 /* ARTSATDataGraphViewController.m in Sources */,
+				B2B63B4B175EE52200BCE0F2 /* ARTSATDataGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,13 +463,13 @@
 		B27BB1A2173A3E4800255F05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: KOICHIRO MORI (V5QZDN7ZWN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARTSATDataTest/ARTSATDataTest-Prefix.pch";
 				INFOPLIST_FILE = "ARTSATDataTest/ARTSATDataTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B7E3309E-4D8E-49DC-BA9B-1B39F8A669AF";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
